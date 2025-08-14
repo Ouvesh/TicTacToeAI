@@ -58,3 +58,7 @@ class Renderer:
         pygame.draw.line(self.game.screen, (0,0,0),(x - Config.board_offset_x,y - Config.board_offset_y), (x + Config.board_offset_x,y + Config.board_offset_y), Config.cross_thickness)
         pygame.draw.line(self.game.screen, (0, 0, 0), (x - Config.board_offset_x, y + Config.board_offset_y),
                          (x + Config.board_offset_x, y - Config.board_offset_y), Config.cross_thickness)
+
+    def clear_screen(self):
+        self.game.screen.fill((0, 0, 0))
+        pygame.display.flip()

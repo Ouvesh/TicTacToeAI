@@ -18,8 +18,8 @@ class Board:
         return self.board[i][j]
 
 
-    def is_full(self):
-        return all(cell is not None for row in self.board for cell in row)
+    def is_full(self, board):
+        return all(cell is not None for row in board for cell in row)
 
 
     def reset_board(self):
