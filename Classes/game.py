@@ -29,6 +29,11 @@ class Game:
         self.renderer = Renderer(self.board, self)
         self.GAME_STATE = GameState.MENU
 
+    @staticmethod
+    def quit():
+        pygame.quit()
+        sys.exit()
+
 
     def reset_game(self):
         print("resetting game")
@@ -49,10 +54,6 @@ class Game:
             self.turn = self.player2
         elif self.turn == self.player2:
             self.turn = self.player1
-
-    def quit(self):
-        pygame.quit()
-        sys.exit()
 
 
     def check_win(self, symbol, board):
